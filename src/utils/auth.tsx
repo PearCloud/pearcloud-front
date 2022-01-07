@@ -5,7 +5,7 @@ import { urls } from './urls'
 const instance = axios.create({ baseURL: urls.api.MAIN })
 
 export const auth = {
-    isAuthenticated: false,
+    isAuthenticated: true,
     async logIn(loggin: Object, callback: Function) {
         await instance.post(urls.api.LOGIN, loggin)
             .then((res) => {
