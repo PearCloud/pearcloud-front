@@ -11,6 +11,6 @@ export const LanguageButton: React.FC = () => {
         }
     }
     return (
-        <div className="text-base cursor-pointer mr-4" onClick={changeLanguage}>{language}</div>
+        <div className="text-base cursor-pointer mr-4 text-slate-800 dark:text-slate-200" onClick={changeLanguage}>{language}</div>
     )
 }

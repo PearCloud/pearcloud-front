@@ -14,6 +14,6 @@ export const DarkModeButton: React.FC = () => {
         }
     }
     return (
-        <div className="cursor-pointer m-1" onClick={darkMode}>{themeDark ? <FiMoon /> : <FiSun />}</div>
+        <div className="cursor-pointer m-1 text-slate-800 dark:text-slate-200" onClick={darkMode}>{themeDark ? <FiMoon /> : <FiSun />}</div>
     )
 }
