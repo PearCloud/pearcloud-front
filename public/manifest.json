@@ -1,0 +1,36 @@
+{
+    "name": "PearCloud App",
+    "short_name": "PearCloud",
+    "icons": [
+        {
+            "src": "dist/assets/images/logo64.png",
+            "sizes": "64x64",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "dist/assets/images/logo128.png",
+            "sizes": "128x128",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "dist/assets/images/logo256.png",
+            "sizes": "256x256",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "dist/assets/images/logo516.png",
+            "sizes": "516x516",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "start_url": ".",
+    "lang": "any",
+    "orientation": "any",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}

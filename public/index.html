@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/assets/css/styles.css">
+    <meta name="theme-color" content="#ffffff"/>
+    <link rel="apple-touch-icon" href="dist/assets/images/logo256.png">
+    <link rel="icon" type="image/png" href="dist/assets/images/logo64.png">
+    <link rel="stylesheet" href="dist/assets/css/styles.css">
+    <link rel="manifest" href="manifest.json">
+    <title>PearCloud</title>
+</head>
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="module" src="dist/index.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('serviceWorker.js').then(function(registration) {
+                    console.log('Worker registration successful', registration.scope)
+                }, function(err) {
+                    console.log('Worker registration failed', err)
+                }).catch(function(err) {
+                    console.log(err)
+                })
+            })
+        } else {
+            console.log('Service Worker is not supported by browser.')
+        }
+    </script>
+</body>
+</html>
