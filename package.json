@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "snowpack dev --polyfill-node",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
-    "test": "jest",
+    "test": "echo 'Wait my friend.. wait..'",
     "build": "snowpack build --polyfill-node"
   },
   "repository": {
