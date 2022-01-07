@@ -2,7 +2,8 @@ export const urls = {
     app: {
         LOGIN: '/',
         LOGOUT: '/logout',
-        HOME: '/home',
+        PEARCLOUD: '/pearcloud',
+        IMPORT: '/import',
         FAVORITES: '/favorites',
         ALBUMS: '/albums',
         TRASH: '/trash',
@@ -11,6 +12,7 @@ export const urls = {
     api: {
         MAIN: 'https://facebook.com',
         LOGIN: '/api/login',
+        IMPORT: '/api/imoprt',
         LOGOUT: '/api/logout',
         HOME: '/api/home',
         FAVORITES: '/api/favorites',
