@@ -1,6 +1,6 @@
 export const urls = {
     app: {
-        LOGIN: '/login',
+        LOGIN: '/',
         LOGOUT: '/logout',
         HOME: '/home',
         FAVORITES: '/favorites',
