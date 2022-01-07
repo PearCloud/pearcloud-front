@@ -9,6 +9,7 @@ export const urls = {
         SETTINGS: '/settings',
     },
     api: {
+        MAIN: 'https://facebook.com',
         LOGIN: '/api/login',
         LOGOUT: '/api/logout',
         HOME: '/api/home',
