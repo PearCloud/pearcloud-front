@@ -1,12 +1,24 @@
-/* TODO */
+import axios from 'axios'
+
+import { urls } from './urls'
+
+const instance = axios.create({ baseURL: urls.api.MAIN })
+
 export const auth = {
     isAuthenticated: false,
-    login(callBack: Function) {
+    async logIn(loggin: Object, callback: Function) {
+        await instance.post(urls.api.LOGIN, loggin)
+            .then((res) => {
+                console.log(res)
+            })
+            .catch((err) => {
+                console.log(err)
+            })
         auth.isAuthenticated = true
-        callBack()
+        callback()
     },
-    logout(callBack: Function) {
+    logOut(callback: Function) {
         auth.isAuthenticated = false
-        callBack()
+        callback()
     },
 }

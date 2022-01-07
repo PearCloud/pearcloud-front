@@ -12,27 +12,25 @@ import { Albums } from './pages/Albums'
 
 export const App: React.FC = () => {
     return (
-        <div>
-            <Routes>
-                <Route path={urls.app.LOGIN} element={<Connexion />} />
-                <Route
-                    path={urls.app.HOME}
-                    element={
-                        <PrivateRoute>
-                            <Home />
-                        </PrivateRoute>
-                    }
-                ></Route>
-                <Route
-                    path={urls.app.ALBUMS}
-                    element={
-                        <PrivateRoute>
-                            <Albums />
-                        </PrivateRoute>
-                    }
-                ></Route>
-                <Route path="*" element={<NotFound />} />
-            </Routes>
-        </div>
+        <Routes>
+            <Route path={urls.app.LOGIN} element={<Connexion />} />
+            <Route
+                path={urls.app.HOME}
+                element={
+                    <PrivateRoute>
+                        <Home />
+                    </PrivateRoute>
+                }
+            ></Route>
+            <Route
+                path={urls.app.ALBUMS}
+                element={
+                    <PrivateRoute>
+                        <Albums />
+                    </PrivateRoute>
+                }
+            ></Route>
+            <Route path="*" element={<NotFound />} />
+        </Routes>
     )
 }

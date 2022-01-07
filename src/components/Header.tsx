@@ -9,20 +9,13 @@ export const Header: React.FC = () => {
 
     return (
         <div>
-            {auth.isAuthenticated ? 
+            {auth.isAuthenticated &&
                 <div>
                     <div>Authentified</div>
-                    <button onClick={() => { auth.logout(() => navigate(urls.app.LOGIN))}}>
+                    <button onClick={() => { auth.logOut(() => navigate(urls.app.LOGIN))}}>
                         Sign out
                     </button>
                 </div> 
-                : 
-                <div>
-                    <div>Need to be log</div>
-                    <button onClick={() => { auth.login(() => navigate(urls.app.HOME))}}>
-                        Sign in
-                    </button>
-                </div>
             }
         </div>
     )
