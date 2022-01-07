@@ -11,6 +11,7 @@ module.exports = {
     '@snowpack/plugin-react-refresh',
     '@snowpack/plugin-postcss',
     '@snowpack/plugin-dotenv',
+    '@snowpack/plugin-typescript',
   ],
   devOptions: {
     port: 3000,
