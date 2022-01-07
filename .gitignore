@@ -1,0 +1,9 @@
+# Other
+.env
+.DS_Store
+
+# Dependencies
+node_modules/
+
+# Production
+build/
