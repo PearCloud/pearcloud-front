@@ -1,0 +1,28 @@
+#testMe {
+    position: fixed;
+    left: 45%;
+    width: 100px;
+    height: 200px;
+    background-image: url('dist/assets/images/randomImages/nature1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+    filter: blur(2px);
+    animation: 60s balade infinite;
+}
+
+@keyframes balade {
+    0% {
+        top: -100%;
+        left: 45%;
+    }
+    50% {
+        top: 100%;
+        left: 80%;
+    }
+    100% {
+        top: 0%;
+        left: 45%;
+    }
+}

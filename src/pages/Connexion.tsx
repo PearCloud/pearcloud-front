@@ -9,6 +9,7 @@ import { urls } from '../utils/urls'
 
 import { DarkModeButton } from '../components/DarkModeButton'
 import { LanguageButton } from '../components/LanguageButton'
+import { RandomPhoto } from '../components/RandomPhoto'
 
 export const Connexion: React.FC = () => {
     const navigate = useNavigate()
@@ -51,8 +52,9 @@ export const Connexion: React.FC = () => {
                 <LanguageButton />
                 <DarkModeButton />
             </div>
+            <RandomPhoto />
             <div className="w-full h-full flex flex-col items-center justify-center">
-                <div className="text-center w-80">
+                <div className="text-center w-80 z-50">
                     <div className="flex justify-center items-center mb-10 text-3xl text-slate-800 dark:text-slate-200">
                         <span className="text-green-500">Pear</span>Cloud <GiPear />
                     </div>
