@@ -92,18 +92,16 @@ export const Navbar: React.FC = () => {
                     <div className="text-xs text-gray-500 dark:text-gray-200">Connecté en tant que</div>
                     <div className="text-sm text-slate-800 dark:text-slate-200">{`${firstName} ${lastName[0]}.`}</div>
                 </div>
-                <div className="text-red-700 dark:text-red-400">
-                    <button onClick={handleLogout as any}>
-                        {isLoading ? 
-                            <ReactLoading
-                                type="spin"
-                                color="white"
-                                height={17}
-                                width={17}
-                            /> : <RiLogoutCircleRLine />
-                        }
-                    </button>
-                </div>
+                <button onClick={handleLogout as any} className="text-red-700 dark:text-red-400 text-2xl">
+                    {isLoading ? 
+                        <ReactLoading
+                            type="spin"
+                            color="red"
+                            height={17}
+                            width={17}
+                        /> : <RiLogoutCircleRLine />
+                    }
+                </button>
             </div>
         </nav>
     )
