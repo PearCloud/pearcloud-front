@@ -36,7 +36,7 @@ export const Navbar: React.FC = () => {
     }
 
     return (
-        <nav className="flex flex-row md:flex-col items-center lg:items-stretch justify-between bg-slate-50 dark:bg-slate-700 p-0 md:p-1 md:py-3 lg:p-5">
+        <nav className="flex flex-row md:flex-col items-center lg:items-stretch justify-between bg-slate-50 dark:bg-slate-700 p-0 md:p-1 md:py-3 lg:p-5 select-none">
             <div className="hidden md:flex justify-center items-center mb-10 text-3xl text-slate-800 dark:text-slate-200 select-none">
                 <span className="hidden lg:inline"><span className="text-green-500">Pear</span>Cloud</span> <GiPear />
             </div>
