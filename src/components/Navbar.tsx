@@ -38,36 +38,36 @@ export const Navbar: React.FC = () => {
     return (
         <nav className="flex flex-row md:flex-col items-center lg:items-stretch justify-between bg-slate-50 dark:bg-slate-700 p-0 md:p-1 md:py-3 lg:p-5 select-none">
             <div className="hidden md:flex justify-center items-center mb-10 text-3xl text-slate-800 dark:text-slate-200 select-none">
-                <span className="hidden lg:inline"><span className="text-green-500">Pear</span>Cloud</span> <GiPear />
+                <span className="hidden lg:inline"><span className="text-green-700">Pear</span>Cloud</span> <GiPear />
             </div>
             <div className="text-xl md:text-base flex flex-row justify-between w-full md:w-auto p-2 md:block">
                 <div className="my-2 md:my-5">
-                    <Link to={urls.app.PEARCLOUD} className="flex items-center p-2 border rounded-xl text-slate-800 dark:text-slate-200 hover:border-green-500 hover:text-green-500 dark:hover:text-green-500 transition-colors">
+                    <Link to={urls.app.PEARCLOUD} className="flex items-center p-2 border rounded-xl text-slate-800 dark:text-slate-200 hover:border-green-500 hover:text-green-500 dark:hover:text-green-500 transition-colors" aria-label="photos">
                         <FiHome className="mx-2"/> <span className="hidden lg:inline">Photos</span>
                     </Link>
                 </div>
                 <div className="my-2 md:my-5">
-                    <Link to={urls.app.IMPORT} className="flex items-center p-2 border rounded-xl text-slate-800 dark:text-slate-200 hover:border-green-500 hover:text-green-500 dark:hover:text-green-500 transition-colors">
+                    <Link to={urls.app.IMPORT} className="flex items-center p-2 border rounded-xl text-slate-800 dark:text-slate-200 hover:border-green-500 hover:text-green-500 dark:hover:text-green-500 transition-colors" aria-label="importer">
                         <AiOutlineCloud className="mx-2" /> <span className="hidden lg:inline">Importer</span>
                     </Link>
                 </div>
                 <div className="my-2 md:my-5">
-                    <Link to={urls.app.ALBUMS} className="flex items-center p-2 border rounded-xl text-slate-800 dark:text-slate-200 hover:border-green-500 hover:text-green-500 dark:hover:text-green-500 transition-colors">
+                    <Link to={urls.app.ALBUMS} className="flex items-center p-2 border rounded-xl text-slate-800 dark:text-slate-200 hover:border-green-500 hover:text-green-500 dark:hover:text-green-500 transition-colors" aria-label="albums">
                         <BsJournalAlbum className="mx-2" /> <span className="hidden lg:inline">Albums</span>
                     </Link>
                 </div>
                 <div className="my-2 md:my-5">
-                    <Link to={urls.app.FAVORITES} className="flex items-center p-2 border rounded-xl text-slate-800 dark:text-slate-200 hover:border-green-500 hover:text-green-500 dark:hover:text-green-500 transition-colors">
+                    <Link to={urls.app.FAVORITES} className="flex items-center p-2 border rounded-xl text-slate-800 dark:text-slate-200 hover:border-green-500 hover:text-green-500 dark:hover:text-green-500 transition-colors" aria-label="favoris">
                         <FaRegStar className="mx-2" /> <span className="hidden lg:inline">Favoris</span>
                     </Link>
                 </div>
                 <div className="my-2 md:my-5">
-                    <Link to={urls.app.TRASH} className="flex items-center p-2 border rounded-xl text-slate-800 dark:text-slate-200 hover:border-green-500 hover:text-green-500 dark:hover:text-green-500 transition-colors">
+                    <Link to={urls.app.TRASH} className="flex items-center p-2 border rounded-xl text-slate-800 dark:text-slate-200 hover:border-green-500 hover:text-green-500 dark:hover:text-green-500 transition-colors" aria-label="corbeille">
                         <BsTrash2 className="mx-2" /> <span className="hidden lg:inline">Corbeille</span>
                     </Link>
                 </div>
                 <div className="hidden md:block my-2 md:my-5">
-                    <Link to={urls.app.SETTINGS} className="flex items-center p-2 border rounded-xl text-slate-800 dark:text-slate-200 hover:border-green-500 hover:text-green-500 dark:hover:text-green-500 transition-colors">
+                    <Link to={urls.app.SETTINGS} className="flex items-center p-2 border rounded-xl text-slate-800 dark:text-slate-200 hover:border-green-500 hover:text-green-500 dark:hover:text-green-500 transition-colors" aria-label="parametre">
                         <GoSettings className="mx-2" /> <span className="hidden lg:inline">Paramètre</span>
                     </Link>
                 </div>
@@ -92,7 +92,7 @@ export const Navbar: React.FC = () => {
                     <div className="text-xs text-gray-500 dark:text-gray-200">Connecté en tant que</div>
                     <div className="text-sm text-slate-800 dark:text-slate-200">{`${firstName} ${lastName[0]}.`}</div>
                 </div>
-                <button onClick={handleLogout as any} className="text-red-700 dark:text-red-400 text-2xl">
+                <button onClick={handleLogout as any} className="text-red-500 dark:text-red-400 text-2xl" aria-label="logout-btn">
                     {isLoading ? 
                         <ReactLoading
                             type="spin"

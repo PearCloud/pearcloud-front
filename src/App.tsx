@@ -19,6 +19,10 @@ import { Home } from './layouts/Home'
 // import { Bubble } from './components/dev/Bubble'
 
 export const App: React.FC = () => {
+    React.useEffect(() => {
+        document.documentElement.setAttribute("lang", "fr")
+    }, [])
+
     return (
         <>
             {/* <Bubble /> */}

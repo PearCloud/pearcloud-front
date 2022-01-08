@@ -43,7 +43,7 @@ export const MobileMenu: React.FC = () => {
         <>
             <div className={`absolute top-0 left-0 w-screen h-screen bg-slate-200 dark:bg-slate-800 p-2 transition${isActive ? ' block' : ' hidden'}`}>
                 <div className="flex justify-center items-center text-3xl text-slate-800 dark:text-slate-200 select-none h-[5%]">
-                    <span className="text-green-500">Pear</span>Cloud <GiPear />
+                    <span className="text-green-700">Pear</span>Cloud <GiPear />
                 </div>
                 <div className="flex flex-col justify-between items-center h-[95%]">
                     <LanguageButton />
@@ -56,7 +56,7 @@ export const MobileMenu: React.FC = () => {
                             <div className="text-xs text-gray-500 dark:text-gray-200">Connecté en tant que</div>
                             <div className="text-sm text-slate-800 dark:text-slate-200">{`${firstName} ${lastName[0]}.`}</div>
                         </div>
-                        <button onClick={handleLogout as any} className="text-red-700 dark:text-red-400 text-2xl">
+                        <button onClick={handleLogout as any} className="text-red-500 dark:text-red-400 text-2xl" aria-label="logout-btn">
                             {isLoading ? 
                                 <ReactLoading
                                     type="spin"
@@ -69,7 +69,7 @@ export const MobileMenu: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <button className="absolute z-30 left-2 top-4 cursor-pointer" onClick={handleMenu}>
+            <button className="absolute z-30 left-2 top-4 cursor-pointer" onClick={handleMenu} aria-label="settings-menu">
                 {isActive ? <CgClose className="mx-2" /> : <GoSettings className="mx-2" />}
             </button>
         </>
