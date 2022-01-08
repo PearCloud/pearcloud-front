@@ -47,7 +47,7 @@ export const Connexion: React.FC = () => {
     }
 
     return (
-        <div className="w-screen h-screen relative bg-slate-200 dark:bg-slate-800 text-p-2 text-xl transition-colors">
+        <div className="w-full h-full relative bg-slate-200 dark:bg-slate-800 text-p-2 text-xl transition-colors">
             <div className="absolute flex items-center right-2 top-2">
                 <LanguageButton />
                 <DarkModeButton />
