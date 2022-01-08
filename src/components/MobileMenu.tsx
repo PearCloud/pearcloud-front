@@ -43,7 +43,7 @@ export const MobileMenu: React.FC = () => {
         <>
             <div className={`absolute top-0 left-0 w-screen h-screen bg-slate-200 dark:bg-slate-800 p-2 transition${isActive ? ' block' : ' hidden'}`}>
                 <div className="flex justify-center items-center text-3xl text-slate-800 dark:text-slate-200 select-none h-[5%]">
-                    <span className="text-green-700">Pear</span>Cloud <GiPear />
+                    <span className="text-green-700 dark:text-green-500">Pear</span>Cloud <GiPear />
                 </div>
                 <div className="flex flex-col justify-between items-center h-[95%]">
                     <LanguageButton />

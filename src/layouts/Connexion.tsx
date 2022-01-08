@@ -56,7 +56,7 @@ export const Connexion: React.FC = () => {
             <div className="w-full h-full flex flex-col items-center justify-center">
                 <div className="text-center w-80 z-50">
                     <div className="flex justify-center items-center mb-10 text-3xl text-slate-800 dark:text-slate-200 select-none">
-                        <span className="text-green-700">Pear</span>Cloud <GiPear />
+                        <span className="text-green-700 dark:text-green-500">Pear</span>Cloud <GiPear />
                     </div>
                     <form className="flex flex-col" onSubmit={handleLogin as any}>
                         <label htmlFor="identifiant" className="mb-1 text-left cursor-pointer text-slate-800 dark:text-slate-200">
