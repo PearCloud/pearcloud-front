@@ -1,7 +1,7 @@
 # Other
 .env
 .DS_Store
-.vscode
+.vscode/
 tsconfig.tsbuildinfo
 
 # Dependencies
