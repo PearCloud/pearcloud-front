@@ -16,12 +16,12 @@ import { Trash } from './layouts/Trash'
 import { Settings } from './layouts/Settings'
 import { Home } from './layouts/Home'
 
-import { Bubble } from './components/dev/Bubble'
+// import { Bubble } from './components/dev/Bubble'
 
 export const App: React.FC = () => {
     return (
         <>
-            <Bubble />
+            {/* <Bubble /> */}
             <Routes>
                 <Route path={urls.app.LOGIN} element={<Connexion />} />
                 <Route path={urls.app.PEARCLOUD}
