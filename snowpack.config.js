@@ -31,4 +31,8 @@ module.exports = {
     out: 'build',
     clean: true,
   },
+  optimize: {
+    bundle: true,
+    minify: true,
+  }
 }
