@@ -57,3 +57,11 @@
 ├── tsconfig.json
 └── yarn.lock
 ```
+
+## :stars: Show your support
+
+Please give a :star: if this project helped you !
+
+## :scroll: License
+
+MIT © [PearCloud](https://github.com/PearCloud)
