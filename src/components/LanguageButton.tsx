@@ -6,8 +6,10 @@ export const LanguageButton: React.FC = () => {
     const changeLanguage = () => {
         if (language === 'FR') {
             setLanguage('EN')
+            document.documentElement.setAttribute("lang", "en")
         } else {
             setLanguage('FR')
+            document.documentElement.setAttribute("lang", "fr")
         }
     }
     return (
