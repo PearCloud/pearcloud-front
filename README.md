@@ -17,7 +17,7 @@
 
 ## :art: Prototype
 
-<a src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fkmxk0moBT50jBLzGCkiNwF%2FpearCloud">Click Me</a>
+<a target="_blank" href="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fkmxk0moBT50jBLzGCkiNwF%2FpearCloud">Click Me</a>
 
 # Project structure
 
