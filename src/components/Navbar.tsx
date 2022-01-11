@@ -1,6 +1,6 @@
 import * as React from 'react'
 import ReactLoading from 'react-loading'
-import { useNavigate, Link } from 'react-router-dom'
+import { useNavigate, Link, useLocation } from 'react-router-dom'
 
 import { GiPear } from 'react-icons/gi'
 import { FaRegStar } from 'react-icons/fa'
@@ -19,6 +19,7 @@ import { StorageInfo } from './StorageInfo'
 
 export const Navbar: React.FC = () => {
     const navigate = useNavigate()
+    const resolved = useLocation();
 
     const [isLoading, setIsLoading] = React.useState<boolean>(false)
 
@@ -36,55 +37,55 @@ export const Navbar: React.FC = () => {
     }
 
     return (
-        <nav className="flex flex-row md:flex-col items-center lg:items-stretch justify-between bg-slate-50 dark:bg-slate-700 p-0 md:p-1 md:py-3 lg:p-5 select-none">
+        <nav className="md:h-full md:fixed md:overflow-scroll flex flex-row md:flex-col items-center lg:items-stretch justify-between bg-slate-50 dark:bg-slate-700 p-0 md:p-1 md:py-3 lg:px-5 select-none">
             <div className="hidden md:flex justify-center items-center mb-10 text-3xl text-slate-800 dark:text-slate-200 select-none">
                 <span className="hidden lg:inline"><span className="text-green-700 dark:text-green-500">Pear</span>Cloud</span> <GiPear />
             </div>
-            <div className="text-xl md:text-base flex flex-row justify-between w-full md:w-auto p-2 md:block">
-                <div className="my-2 md:my-5">
-                    <Link to={urls.app.PEARCLOUD} className="flex items-center p-2 border rounded-xl text-slate-800 dark:text-slate-200 hover:border-green-500 hover:text-green-500 dark:hover:text-green-500 transition-colors" aria-label="photos">
+            <div className="text-xl md:text-base flex flex-row justify-between w-full md:w-auto md:p-2 md:block">
+                <div className="md:my-5">
+                    <Link to={urls.app.PEARCLOUD} className={`flex items-center p-4 border-t-2 border-slate-50 md:rounded-xl text-slate-800 dark:text-slate-200 transition-colors ${resolved.pathname === urls.app.PEARCLOUD ? "border-green-500 text-green-500 dark:border-green-500 dark:text-green-500" : "dark:border-slate-700 hover:border-green-500 dark:hover:border-green-500 hover:text-green-500 dark:hover:text-green-500"}`} aria-label="photos">
                         <FiHome className="mx-2"/> <span className="hidden lg:inline">Photos</span>
                     </Link>
                 </div>
-                <div className="my-2 md:my-5">
-                    <Link to={urls.app.IMPORT} className="flex items-center p-2 border rounded-xl text-slate-800 dark:text-slate-200 hover:border-green-500 hover:text-green-500 dark:hover:text-green-500 transition-colors" aria-label="importer">
+                <div className="md:my-5">
+                    <Link to={urls.app.IMPORT} className={`flex items-center p-4 border-t-2 border-slate-50 md:rounded-xl text-slate-800 dark:text-slate-200 transition-colors ${resolved.pathname === urls.app.IMPORT ? "border-green-500 text-green-500 dark:border-green-500 dark:text-green-500" : "dark:border-slate-700 hover:border-green-500 dark:hover:border-green-500 hover:text-green-500 dark:hover:text-green-500"}`} aria-label="importer">
                         <AiOutlineCloud className="mx-2" /> <span className="hidden lg:inline">Importer</span>
                     </Link>
                 </div>
-                <div className="my-2 md:my-5">
-                    <Link to={urls.app.ALBUMS} className="flex items-center p-2 border rounded-xl text-slate-800 dark:text-slate-200 hover:border-green-500 hover:text-green-500 dark:hover:text-green-500 transition-colors" aria-label="albums">
+                <div className="md:my-5">
+                    <Link to={urls.app.ALBUMS} className={`flex items-center p-4 border-t-2 border-slate-50 md:rounded-xl text-slate-800 dark:text-slate-200 transition-colors ${resolved.pathname === urls.app.ALBUMS ? "border-green-500 text-green-500 dark:border-green-500 dark:text-green-500" : "dark:border-slate-700 hover:border-green-500 dark:hover:border-green-500 hover:text-green-500 dark:hover:text-green-500"}`} aria-label="albums">
                         <BsJournalAlbum className="mx-2" /> <span className="hidden lg:inline">Albums</span>
                     </Link>
                 </div>
-                <div className="my-2 md:my-5">
-                    <Link to={urls.app.FAVORITES} className="flex items-center p-2 border rounded-xl text-slate-800 dark:text-slate-200 hover:border-green-500 hover:text-green-500 dark:hover:text-green-500 transition-colors" aria-label="favoris">
+                <div className="md:my-5">
+                    <Link to={urls.app.FAVORITES} className={`flex items-center p-4 border-t-2 border-slate-50 md:rounded-xl text-slate-800 dark:text-slate-200 transition-colors ${resolved.pathname === urls.app.FAVORITES ? "border-green-500 text-green-500 dark:border-green-500 dark:text-green-500" : "dark:border-slate-700 hover:border-green-500 dark:hover:border-green-500 hover:text-green-500 dark:hover:text-green-500"}`} aria-label="favoris">
                         <FaRegStar className="mx-2" /> <span className="hidden lg:inline">Favoris</span>
                     </Link>
                 </div>
-                <div className="my-2 md:my-5">
-                    <Link to={urls.app.TRASH} className="flex items-center p-2 border rounded-xl text-slate-800 dark:text-slate-200 hover:border-green-500 hover:text-green-500 dark:hover:text-green-500 transition-colors" aria-label="corbeille">
+                <div className="md:my-5">
+                    <Link to={urls.app.TRASH} className={`flex items-center p-4 border-t-2 border-slate-50 md:rounded-xl text-slate-800 dark:text-slate-200 transition-colors ${resolved.pathname === urls.app.TRASH ? "border-green-500 text-green-500 dark:border-green-500 dark:text-green-500" : "dark:border-slate-700 hover:border-green-500 dark:hover:border-green-500 hover:text-green-500 dark:hover:text-green-500"}`} aria-label="corbeille">
                         <BsTrash2 className="mx-2" /> <span className="hidden lg:inline">Corbeille</span>
                     </Link>
                 </div>
-                <div className="hidden md:block my-2 md:my-5">
-                    <Link to={urls.app.SETTINGS} className="flex items-center p-2 border rounded-xl text-slate-800 dark:text-slate-200 hover:border-green-500 hover:text-green-500 dark:hover:text-green-500 transition-colors" aria-label="parametre">
+                <div className="hidden md:block md:my-5">
+                    <Link to={urls.app.SETTINGS} className={`flex items-center p-4 border-t-2 border-slate-50 md:rounded-xl text-slate-800 dark:text-slate-200 transition-colors ${resolved.pathname === urls.app.SETTINGS ? "border-green-500 text-green-500 dark:border-green-500 dark:text-green-500" : "dark:border-slate-700 hover:border-green-500 dark:hover:border-green-500 hover:text-green-500 dark:hover:text-green-500"}`} aria-label="parametre">
                         <GoSettings className="mx-2" /> <span className="hidden lg:inline">Paramètre</span>
                     </Link>
                 </div>
             </div>
-            <div className="hidden lg:flex items-center justify-between">
+            <div className="hidden lg:flex items-center justify-between my-4">
                 <LanguageButton />
                 <StorageInfo />
                 <DarkModeButton />
             </div>
-            <div className="hidden md:flex lg:hidden items-center justify-between px-2 w-full">
+            <div className="hidden md:flex lg:hidden items-center justify-between px-2 w-full my-4">
                 <LanguageButton />
                 <DarkModeButton />
             </div>
-            <div className="hidden md:block lg:hidden">
+            <div className="hidden md:block lg:hidden my-4">
                 <StorageInfo />
             </div>
-            <div className="hidden md:flex items-center justify-between">
+            <div className="hidden md:flex mt-4 items-center justify-between">
                 <div className="shrink-0 mr-4">
                     <img className="h-10 w-10 object-cover rounded-full" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1361&q=80" alt="Current profile photo" />
                 </div>
