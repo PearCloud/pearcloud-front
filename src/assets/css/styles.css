@@ -4,3 +4,7 @@
 html {
     font-family: 'Moderat-Regular';
 }
+
+nav {
+    scrollbar-width: 1px;
+}
