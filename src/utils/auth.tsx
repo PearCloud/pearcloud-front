@@ -1,8 +1,4 @@
-// import axios from 'axios'
-
 // import { urls } from './urls'
-
-// const instance = axios.create({ baseURL: urls.api.MAIN })
 
 export const auth = {
     isAuthenticated: true,
