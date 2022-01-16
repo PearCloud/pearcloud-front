@@ -1,7 +1,7 @@
 // import { urls } from './urls'
 
 export const auth = {
-    isAuthenticated: true,
+    isAuthenticated: false,
     async logIn(loggin: Object, callback: Function) {
         console.log(loggin)
         setTimeout(() => {
