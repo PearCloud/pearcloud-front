@@ -53,25 +53,21 @@ export const Import: React.FC = () => {
     }
 
     return (
-        <div className="flex flex-col-reverse md:flex-row w-full h-full bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 transition-colors">
-            <Navbar />
-            <div className="flex-1 flex flex-col items-center md:ml-24 lg:ml-80 mt-14 md:mt-0 mb-24 md:mb-0">
-                <DragAndDrop onFileChange={(files: any) => onFileChange(files)} />
-                <button
-                    onClick={upload}
-                    disabled={!files}
-                    className="mt-auto rounded-2xl py-4 px-8 my-4 bg-green-500 dark:bg-green-800 text-slate-100 dark:text-slate-200 cursor-pointer text-bold text-xl disabled:bg-slate-500 dark:disabled:bg-slate-500 disabled:cursor-not-allowed transition">
-                    {isLoading ? 
-                        <ReactLoading
-                            type="spin"
-                            color="red"
-                            height={17}
-                            width={17}
-                        /> : "Upload"
-                    }
-                </button>
-            </div>
-            <TopBar />
+        <div className="flex-1 flex flex-col items-center md:ml-24 lg:ml-80 mt-14 md:mt-0 mb-24 md:mb-0">
+            <DragAndDrop onFileChange={(files: any) => onFileChange(files)} />
+            <button
+                onClick={upload}
+                disabled={!files}
+                className="mt-auto rounded-2xl py-4 px-8 my-4 bg-green-500 dark:bg-green-800 text-slate-100 dark:text-slate-200 cursor-pointer text-bold text-xl disabled:bg-slate-500 dark:disabled:bg-slate-500 disabled:cursor-not-allowed transition">
+                {isLoading ? 
+                    <ReactLoading
+                        type="spin"
+                        color="red"
+                        height={17}
+                        width={17}
+                    /> : "Upload"
+                }
+            </button>
             <ToastContainer theme={`${isDarkModeActive ? 'dark' : 'light'}`}/>
         </div>
     )
