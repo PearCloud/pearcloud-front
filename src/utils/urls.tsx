@@ -10,10 +10,8 @@ export const urls = {
         SETTINGS: '/pearcloud/settings',
     },
     api: {
-        MAIN: 'https://facebook.com',
         LOGIN: '/api/login',
-        IMPORT: '/api/imoprt',
-        LOGOUT: '/api/logout',
+        IMPORT: '/api/import',
         HOME: '/api/home',
         FAVORITES: '/api/favorites',
         ALBUMS: '/api/albums',
