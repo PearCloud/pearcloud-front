@@ -37,38 +37,38 @@ export const Navbar: React.FC = () => {
     }
 
     return (
-        <nav className="pb-8 md:pb-0 w-full md:w-24 lg:w-80 md:h-full fixed sm:overflow-y-auto flex flex-row md:flex-col items-center lg:items-stretch justify-between bg-slate-50 dark:bg-slate-700 p-0 md:p-1 md:py-3 lg:px-5 select-none">
+        <nav className="pb-8 md:pb-0 w-full md:w-24 lg:w-80 h-24 md:h-full fixed sm:overflow-y-auto flex flex-row md:flex-col items-center lg:items-stretch justify-between bg-slate-50 dark:bg-slate-700 p-0 md:p-1 md:py-3 lg:px-5 select-none">
             <div className="hidden md:flex justify-center items-center mb-10 text-3xl text-slate-800 dark:text-slate-200 select-none">
                 <span className="hidden lg:inline"><span className="text-green-700 dark:text-green-500">Pear</span>Cloud</span> <GiPear />
             </div>
             <div className="text-xl md:text-base flex flex-row justify-between w-full md:w-auto md:block">
                 <div className="md:my-5 flex-1">
-                    <Link to={urls.app.PEARCLOUD} className={`flex items-center justify-center md:justify-start p-4 border-t-2 border-slate-50 text-slate-800 dark:text-slate-200 transition-colors ${resolved.pathname === urls.app.PEARCLOUD ? "border-green-500 text-green-500 dark:border-green-500 dark:text-green-500" : "dark:border-slate-700 hover:border-green-500 dark:hover:border-green-500 hover:text-green-500 dark:hover:text-green-500"}`} aria-label="photos">
+                    <Link to={urls.app.PEARCLOUD} className={`flex items-center justify-center md:justify-start p-5 border-t-2 border-slate-50 text-slate-800 dark:text-slate-200 transition-colors ${resolved.pathname === urls.app.PEARCLOUD ? "border-green-500 text-green-500 dark:border-green-500 dark:text-green-500" : "dark:border-slate-700 hover:border-green-500 dark:hover:border-green-500 hover:text-green-500 dark:hover:text-green-500"}`} aria-label="photos">
                         <FiHome className="mx-2"/> <span className="hidden lg:inline">Photos</span>
                     </Link>
                 </div>
                 <div className="md:my-5 flex-1">
-                    <Link to={urls.app.IMPORT} className={`flex items-center justify-center md:justify-start p-4 border-t-2 border-slate-50 text-slate-800 dark:text-slate-200 transition-colors ${resolved.pathname === urls.app.IMPORT ? "border-green-500 text-green-500 dark:border-green-500 dark:text-green-500" : "dark:border-slate-700 hover:border-green-500 dark:hover:border-green-500 hover:text-green-500 dark:hover:text-green-500"}`} aria-label="importer">
+                    <Link to={urls.app.IMPORT} className={`flex items-center justify-center md:justify-start p-5 border-t-2 border-slate-50 text-slate-800 dark:text-slate-200 transition-colors ${resolved.pathname === urls.app.IMPORT ? "border-green-500 text-green-500 dark:border-green-500 dark:text-green-500" : "dark:border-slate-700 hover:border-green-500 dark:hover:border-green-500 hover:text-green-500 dark:hover:text-green-500"}`} aria-label="importer">
                         <AiOutlineCloud className="mx-2" /> <span className="hidden lg:inline">Importer</span>
                     </Link>
                 </div>
                 <div className="md:my-5 flex-1">
-                    <Link to={urls.app.ALBUMS} className={`flex items-center justify-center md:justify-start p-4 border-t-2 border-slate-50 text-slate-800 dark:text-slate-200 transition-colors ${resolved.pathname === urls.app.ALBUMS ? "border-green-500 text-green-500 dark:border-green-500 dark:text-green-500" : "dark:border-slate-700 hover:border-green-500 dark:hover:border-green-500 hover:text-green-500 dark:hover:text-green-500"}`} aria-label="albums">
+                    <Link to={urls.app.ALBUMS} className={`flex items-center justify-center md:justify-start p-5 border-t-2 border-slate-50 text-slate-800 dark:text-slate-200 transition-colors ${resolved.pathname === urls.app.ALBUMS ? "border-green-500 text-green-500 dark:border-green-500 dark:text-green-500" : "dark:border-slate-700 hover:border-green-500 dark:hover:border-green-500 hover:text-green-500 dark:hover:text-green-500"}`} aria-label="albums">
                         <BsJournalAlbum className="mx-2" /> <span className="hidden lg:inline">Albums</span>
                     </Link>
                 </div>
                 <div className="md:my-5 flex-1">
-                    <Link to={urls.app.FAVORITES} className={`flex items-center justify-center md:justify-start p-4 border-t-2 border-slate-50 text-slate-800 dark:text-slate-200 transition-colors ${resolved.pathname === urls.app.FAVORITES ? "border-green-500 text-green-500 dark:border-green-500 dark:text-green-500" : "dark:border-slate-700 hover:border-green-500 dark:hover:border-green-500 hover:text-green-500 dark:hover:text-green-500"}`} aria-label="favoris">
+                    <Link to={urls.app.FAVORITES} className={`flex items-center justify-center md:justify-start p-5 border-t-2 border-slate-50 text-slate-800 dark:text-slate-200 transition-colors ${resolved.pathname === urls.app.FAVORITES ? "border-green-500 text-green-500 dark:border-green-500 dark:text-green-500" : "dark:border-slate-700 hover:border-green-500 dark:hover:border-green-500 hover:text-green-500 dark:hover:text-green-500"}`} aria-label="favoris">
                         <FaRegStar className="mx-2" /> <span className="hidden lg:inline">Favoris</span>
                     </Link>
                 </div>
                 <div className="md:my-5 flex-1">
-                    <Link to={urls.app.TRASH} className={`flex items-center justify-center md:justify-start p-4 border-t-2 border-slate-50 text-slate-800 dark:text-slate-200 transition-colors ${resolved.pathname === urls.app.TRASH ? "border-green-500 text-green-500 dark:border-green-500 dark:text-green-500" : "dark:border-slate-700 hover:border-green-500 dark:hover:border-green-500 hover:text-green-500 dark:hover:text-green-500"}`} aria-label="corbeille">
+                    <Link to={urls.app.TRASH} className={`flex items-center justify-center md:justify-start p-5 border-t-2 border-slate-50 text-slate-800 dark:text-slate-200 transition-colors ${resolved.pathname === urls.app.TRASH ? "border-green-500 text-green-500 dark:border-green-500 dark:text-green-500" : "dark:border-slate-700 hover:border-green-500 dark:hover:border-green-500 hover:text-green-500 dark:hover:text-green-500"}`} aria-label="corbeille">
                         <BsTrash2 className="mx-2" /> <span className="hidden lg:inline">Corbeille</span>
                     </Link>
                 </div>
                 <div className="hidden md:block md:my-5 flex-1">
-                    <Link to={urls.app.SETTINGS} className={`flex items-center p-4 border-t-2 border-slate-50 text-slate-800 dark:text-slate-200 transition-colors ${resolved.pathname === urls.app.SETTINGS ? "border-green-500 text-green-500 dark:border-green-500 dark:text-green-500" : "dark:border-slate-700 hover:border-green-500 dark:hover:border-green-500 hover:text-green-500 dark:hover:text-green-500"}`} aria-label="parametre">
+                    <Link to={urls.app.SETTINGS} className={`flex items-center p-5 border-t-2 border-slate-50 text-slate-800 dark:text-slate-200 transition-colors ${resolved.pathname === urls.app.SETTINGS ? "border-green-500 text-green-500 dark:border-green-500 dark:text-green-500" : "dark:border-slate-700 hover:border-green-500 dark:hover:border-green-500 hover:text-green-500 dark:hover:text-green-500"}`} aria-label="parametre">
                         <GoSettings className="mx-2" /> <span className="hidden lg:inline">Paramètre</span>
                     </Link>
                 </div>
