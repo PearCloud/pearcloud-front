@@ -7,16 +7,14 @@ import { PrivateRoute } from './PrivateRoute'
 
 import { Connexion } from './pages/Connexion'
 import { NotFound } from './pages/NotFound'
-import { PearCloud } from './pages/PearCloud'
 
-import { Albums } from './layouts/Albums'
-import { Favorites } from './layouts/Favorites'
-import { Import } from './layouts/Import'
-import { Trash } from './layouts/Trash'
-import { Settings } from './layouts/Settings'
-import { Home } from './layouts/Home'
-
-// import { Bubble } from './components/dev/Bubble'
+import { Albums } from './pages/Albums'
+import { Favorites } from './pages/Favorites'
+import { Import } from './pages/Import'
+import { Trash } from './pages/Trash'
+import { Settings } from './pages/Settings'
+import { Home } from './pages/Home'
+import { PearCloud } from './layouts/PearCloud'
 
 export const App: React.FC = () => {
     React.useEffect(() => {
@@ -25,17 +23,14 @@ export const App: React.FC = () => {
 
     return (
         <>
-            {/* <Bubble /> */}
             <Routes>
                 <Route path={urls.app.LOGIN} element={<Connexion />} />
-                <Route path={urls.app.PEARCLOUD}
-                    element={
-                        <PrivateRoute>
-                            <PearCloud />
-                        </PrivateRoute>
-                    }
-                >
-                    <Route path={urls.app.PEARCLOUD} element={
+                <Route path={urls.app.PEARCLOUD} element={
+                    <PrivateRoute>
+                        <PearCloud />
+                    </PrivateRoute>
+                }>
+                    <Route path={urls.app.HOME} element={
                         <PrivateRoute>
                             <Home />
                         </PrivateRoute>

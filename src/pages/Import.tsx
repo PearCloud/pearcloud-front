@@ -1,4 +1,6 @@
 import * as React from 'react'
+import { Navbar } from '../components/Navbar'
+import { TopBar } from '../components/TopBar'
 
 import FileHandler from "../services/FileHandler"
 
@@ -38,8 +40,8 @@ export const Import: React.FC = () => {
     }
 
     return (
-        <div>
-            <h1 className="flex-1 md:ml-24 lg:ml-80 mt-14 md:mt-0">Import App</h1>
+        <div className="flex-1 md:ml-24 lg:ml-80 mt-14 md:mt-0">
+            <h1 className="text-center font-bold text-2xl my-3">Importer</h1>
             <label className="btn btn-default">
                 <input type="file" onChange={selectFile as any} />
             </label>

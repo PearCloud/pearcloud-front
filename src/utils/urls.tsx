@@ -3,6 +3,7 @@ export const urls = {
         LOGIN: '/',
         LOGOUT: '/logout',
         PEARCLOUD: '/pearcloud',
+        HOME: '/pearcloud',
         IMPORT: '/pearcloud/import',
         FAVORITES: '/pearcloud/favorites',
         ALBUMS: '/pearcloud/albums',
