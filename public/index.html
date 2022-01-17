@@ -1,60 +1,79 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="maximum-scale=1,width=device-width,initial-scale=1,user-scalable=0">
-    <link rel="stylesheet" href="dist/assets/css/styles.css">
-    <meta name="theme-color" content="#f8fafc"/>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="maximum-scale=1,width=device-width,initial-scale=1,user-scalable=0"
+        />
+        <link rel="stylesheet" href="dist/assets/css/styles.css" />
+        <meta name="theme-color" content="#f8fafc" />
 
-    <!-- Apple PWA Tricks -->
-    <link rel="apple-touch-icon" href="dist/assets/images/logo256.png">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="#f8fafc" />
-    <link href="dist/assets/images/logo256.png" sizes="256x256" rel="apple-touch-startup-image" />
-    
-    <link rel="icon" type="image/png" href="dist/assets/images/logo64.png">
-    <link rel="stylesheet" href="dist/assets/css/styles.css">
-    <link rel="manifest" href="manifest.json">
-    <title>PearCloud</title>
-</head>
-<body style="width: 100vw; height: 100vh;">
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root" style="width: 100vw; height: 100vh;"></div>
-    <script type="module" src="dist/index.js"></script>
+        <!-- Apple PWA Tricks -->
+        <link rel="apple-touch-icon" href="dist/assets/images/logo256.png" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#f8fafc" />
+        <link
+            href="dist/assets/images/logo256.png"
+            sizes="256x256"
+            rel="apple-touch-startup-image"
+        />
 
-    <!-- PWA Detector -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('serviceWorker.js').then(function(registration) {
-                    console.log('Worker registration successful', registration.scope)
-                }, function(err) {
-                    console.log('Worker registration failed', err)
-                }).catch(function(err) {
-                    console.log(err)
+        <link
+            rel="icon"
+            type="image/png"
+            href="dist/assets/images/logo64.png"
+        />
+        <link rel="stylesheet" href="dist/assets/css/styles.css" />
+        <link rel="manifest" href="manifest.json" />
+        <title>PearCloud</title>
+    </head>
+    <body style="width: 100vw; height: 100vh">
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root" style="width: 100vw; height: 100vh"></div>
+        <script type="module" src="dist/index.js"></script>
+
+        <!-- PWA Detector -->
+        <script>
+            if ("serviceWorker" in navigator) {
+                window.addEventListener("load", function () {
+                    navigator.serviceWorker
+                        .register("serviceWorker.js")
+                        .then(
+                            function (registration) {
+                                console.log(
+                                    "Worker registration successful",
+                                    registration.scope
+                                )
+                            },
+                            function (err) {
+                                console.log("Worker registration failed", err)
+                            }
+                        )
+                        .catch(function (err) {
+                            console.log(err)
+                        })
                 })
-            })
-        } else {
-            console.log('Service Worker is not supported by browser.')
-        }
-    </script>
-    <!-- iOS Detector -->
-    <script>
-        // Detects if device is on iOS 
-        const isIos = () => {
-            const userAgent = window.navigator.userAgent.toLowerCase()
-            return /iphone|ipad|ipod/.test( userAgent )
-        }
-        // Detects if device is in standalone mode
-        const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone)
-        
-        // Checks if should display install popup notification:
-        if (isIos() && !isInStandaloneMode()) {
-            this.setState({ showInstallMessage: true })
-        }
-    </script>
+            } else {
+                console.log("Service Worker is not supported by browser.")
+            }
+        </script>
+        <!-- iOS Detector -->
+        <script>
+            // Detects if device is on iOS
+            const isIos = () => {
+                const userAgent = window.navigator.userAgent.toLowerCase()
+                return /iphone|ipad|ipod/.test(userAgent)
+            }
+            // Detects if device is in standalone mode
+            const isInStandaloneMode = () =>
+                "standalone" in window.navigator && window.navigator.standalone
 
-
-</body>
+            // Checks if should display install popup notification:
+            if (isIos() && !isInStandaloneMode()) {
+                this.setState({ showInstallMessage: true })
+            }
+        </script>
+    </body>
 </html>

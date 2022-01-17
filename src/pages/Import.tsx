@@ -1,14 +1,11 @@
-import * as React from 'react'
-import ReactLoading from 'react-loading'
+import * as React from "react"
+import ReactLoading from "react-loading"
 
-import { ToastContainer, toast} from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
-
-import { Navbar } from '../components/Navbar'
-import { TopBar } from '../components/TopBar'
+import { ToastContainer, toast } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 
 import FileHandler from "../services/FileHandler"
-import { DragAndDrop } from '../components/DragAndDrop'
+import { DragAndDrop } from "../components/DragAndDrop"
 
 export const Import: React.FC = () => {
     const [isLoading, setIsLoading] = React.useState<boolean>(false)
@@ -18,7 +15,8 @@ export const Import: React.FC = () => {
     const [currentFile, setCurrentFile] = React.useState<undefined>(undefined)
     const [progress, setProgress] = React.useState<number>(0)
 
-    const isDarkModeActive = document.querySelector('html')?.classList.contains('dark') || false
+    const isDarkModeActive =
+        document.querySelector("html")?.classList.contains("dark") || false
 
     const upload = () => {
         let currentFile = files[0]
@@ -30,20 +28,20 @@ export const Import: React.FC = () => {
         FileHandler.upload(currentFile, (event: any) => {
             setProgress(Math.round((100 * event.loaded) / event.total))
         })
-        .then((response) => {
-            setIsLoading(false)
-            toast.info(response.data.message)
-            return FileHandler.getFiles()
-        })
-        .then((files) => {
-            console.log(files.data)
-        })
-        .catch(() => {
-            setIsLoading(false)
-            setProgress(0)
-            toast.error("Impossible d'upload l'image !")
-            setCurrentFile(undefined)
-        })
+            .then((response) => {
+                setIsLoading(false)
+                toast.info(response.data.message)
+                return FileHandler.getFiles()
+            })
+            .then((files) => {
+                console.log(files.data)
+            })
+            .catch(() => {
+                setIsLoading(false)
+                setProgress(0)
+                toast.error("Impossible d'upload l'image !")
+                setCurrentFile(undefined)
+            })
 
         setFiles([])
     }
@@ -58,17 +56,20 @@ export const Import: React.FC = () => {
             <button
                 onClick={upload}
                 disabled={!files}
-                className="mt-auto rounded-2xl py-4 px-8 my-4 bg-green-500 dark:bg-green-800 text-slate-100 dark:text-slate-200 cursor-pointer text-bold text-xl disabled:bg-slate-500 dark:disabled:bg-slate-500 disabled:cursor-not-allowed transition">
-                {isLoading ? 
+                className="mt-auto rounded-2xl py-4 px-8 my-4 bg-green-500 dark:bg-green-800 text-slate-100 dark:text-slate-200 cursor-pointer text-bold text-xl disabled:bg-slate-500 dark:disabled:bg-slate-500 disabled:cursor-not-allowed transition"
+            >
+                {isLoading ? (
                     <ReactLoading
                         type="spin"
                         color="red"
                         height={17}
                         width={17}
-                    /> : "Upload"
-                }
+                    />
+                ) : (
+                    "Upload"
+                )}
             </button>
-            <ToastContainer theme={`${isDarkModeActive ? 'dark' : 'light'}`}/>
+            <ToastContainer theme={`${isDarkModeActive ? "dark" : "light"}`} />
         </div>
     )
 }

@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "snowpack dev --polyfill-node",
-    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
-    "test": "echo 'Wait my friend.. wait..'",
+    "prettier-check": "prettier --check src",
+    "prettier-write": "prettier --write src",
+    "eslint": "eslint src --ext .js,.jsx,.ts,.tsx",
+    "jest": "echo 'Wait my friend.. wait..'",
     "build": "snowpack build --polyfill-node"
   },
   "repository": {
@@ -32,6 +34,8 @@
     "@types/node": "^17.0.8",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
+    "@types/react-router-dom": "^5.3.2",
+    "@types/tailwindcss": "^3.0.2",
     "axios": "^0.24.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -49,17 +53,15 @@
     "@snowpack/plugin-typescript": "^1.2.1",
     "@types/jest": "^27.4.0",
     "@types/snowpack-env": "^2.3.4",
-    "@typescript-eslint/eslint-plugin": "^5.9.0",
-    "@typescript-eslint/parser": "^5.9.0",
+    "@typescript-eslint/eslint-plugin": "^5.9.1",
+    "@typescript-eslint/parser": "^5.9.1",
     "autoprefixer": "^10.4.1",
-    "dotenv": "^10.0.0",
-    "eslint": "^8.6.0",
+    "eslint": "^8.7.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.28.0",
     "postcss": "^8.4.5",
     "postcss-cli": "^9.1.0",
-    "prettier": "^2.5.1",
+    "prettier": "2.5.1",
     "react-is": "^17.0.2",
     "snowpack": "^3.8.8"
   },
@@ -73,6 +75,34 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "semi": false,
+    "singleQuote": false,
+    "endOfLine": "lf"
+  },
+  "eslintConfig": {
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": [
+        "./tsconfig.json"
+      ]
+    },
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "ignorePatterns": [
+      "node_modules",
+      "build"
     ]
   }
 }

@@ -1,6 +1,6 @@
-import instance from '../utils/axios-instance'
+import instance from "../utils/axios-instance"
 
-import { urls } from '../utils/urls'
+import { urls } from "../utils/urls"
 
 const upload = (file: any, onUploadProgress: any) => {
     let formData = new FormData()
@@ -21,5 +21,5 @@ const getFiles = () => {
 
 export default {
     upload,
-    getFiles
+    getFiles,
 }

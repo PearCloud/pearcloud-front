@@ -15,6 +15,6 @@
     "jsx": "react-jsx",
     "incremental": true
   },
-  "include": ["src/react-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }

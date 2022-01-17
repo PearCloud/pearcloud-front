@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 export const Bubble = () => (
     <div className="flex items-center justify-center fixed top-0 left-8 mt-4 mr-8 z-50 w-8 h-8 rounded-full text-gray-700 text-sm uppercase bg-gray-200 sm:bg-orange-200 md:bg-green-200 lg:bg-purple-200 xl:bg-red-200">

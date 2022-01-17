@@ -1,8 +1,8 @@
-import * as React from 'react'
-import { Outlet } from 'react-router-dom'
+import * as React from "react"
+import { Outlet } from "react-router-dom"
 
-import { Navbar } from '../components/Navbar'
-import { TopBar } from '../components/TopBar'
+import { Navbar } from "../components/Navbar"
+import { TopBar } from "../components/TopBar"
 
 export const PearCloud: React.FC = () => {
     return (

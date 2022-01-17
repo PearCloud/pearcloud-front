@@ -4,35 +4,35 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
   mount: {
-    public: { url: '/', static: true },
-    src: { url: '/dist' },
+    public: { url: "/", static: true },
+    src: { url: "/dist" },
   },
   plugins: [
-    '@snowpack/plugin-react-refresh',
-    '@snowpack/plugin-postcss',
-    '@snowpack/plugin-dotenv',
-    '@snowpack/plugin-typescript',
+    "@snowpack/plugin-react-refresh",
+    "@snowpack/plugin-postcss",
+    "@snowpack/plugin-dotenv",
+    "@snowpack/plugin-typescript",
   ],
   devOptions: {
     port: 3000,
-    open: 'none',
+    open: "none",
   },
   routes: [
     {
-      match: 'routes',
-      src: '.*',
-      dest: '/index.html',
+      match: "routes",
+      src: ".*",
+      dest: "/index.html",
     },
   ],
   packageOptions: {
-    knownEntrypoints: ['react-is'],
+    knownEntrypoints: ["react-is"],
   },
   buildOptions: {
-    out: 'build',
+    out: "build",
     clean: true,
   },
   optimize: {
     bundle: true,
     minify: true,
-  }
+  },
 }

@@ -9,11 +9,14 @@
 </p>
 
 # :pear: - PearCloud Front-Side
-*Front end part of the sexiest cloud photo of the world.*
+
+_Front end part of the sexiest cloud photo of the world._
 
 > **NOTE**: Stay connect. :eyes:
+
 ## To do
-- [ ] All :)
+
+-   [ ] All :)
 
 ## :art: Prototype
 
